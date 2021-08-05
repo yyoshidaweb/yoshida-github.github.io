@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+/* 共通部分 
+----------------------------------*/
+html{
+    font-size: 100%;
+}
+body{
+    font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* header 
+---------------------------------- */
+.logo{
+    font-family: 'Yomogi', cursive;
+    padding: 8px;
+    color: #666;
+    display: flex;
+}
+.logo h1{
+    font-size: 1.875rem;
+}
+.logo img{
+    height: 36px;
+    width: 36px;
+    margin: 10px 3px 0 0;
+}
+.main-nav{
+    font-family: 'Yomogi', cursive;
+    display: flex;
+    font-size: 1.875rem;
+    padding: 8px;
+    list-style: none;
+}
+.main-nav li{
+    margin-left: 60px;
+}
+.main-nav a{
+    color: #666;
+}
+.main-nav a:hover{
+    color: rgb(102, 102, 102,0.5);
+}
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    /* 背景色 */
+    background-color: #FAFAFA;
+    font-weight: normal;
+}
+.wrapper{
+    max-width: 1980px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* home 
+------------------------------------- */
+.home-content{
+    text-align: center;
+    margin: 20% 0 9% 0;
+}
+
+/* 見出し */
+.page-title{
+    font-size: 3.75rem;
+    font-family: 'Yomogi', cursive;
+    font-weight: normal;
+    color: #666;
+    text-align: center;
+}
+#home .page-title{
+    margin-bottom: 10%;
+}
+
+/* ボタン */
+.btn{
+    font-family: 'Yomogi', cursive;
+    font-size: 1.875rem;
+    background-color: #FAFAFA;
+    color: #666;
+    border-radius: 0;
+    padding: 5px 100px;
+    margin-top: 100px;
+    /* 枠線 */
+    border: solid 1px #666;
+}
+.btn:hover{
+    background-color: rgb(102, 102, 102,0.5);
+    color: white;
+    border: none;
+}
+
+/* about
+----------------------------------------------- */
+.about-content{
+    font-family: 'Yomogi',cursive;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    margin: 13% 0 17% 0;
+}
+.icon{
+    margin-top: 25px;
+    height: 150px;
+    width: 150px;
+    border: solid 1px #666;
+    border-radius: 50%;
+}
+.about-text{
+    margin-left: 2%;
+}
+.about-content h3{
+    font-size: 3.75rem;
+    font-weight: normal;
+    margin-bottom: 3%;
+}
+.about-content p{
+    font-size: 1.875rem;
+}
+
+/* works
+----------------------------------------------------- */
+.grid{
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(1,minmax(300px,60%));
+    margin-top: 8%;
+    margin-bottom: 10%;
+    justify-content: center;
+}
+.item img{
+    object-fit: cover;
+}
+.item img:hover{
+    filter: brightness(70%);
+}
+.item-title{
+    font-size: 1.875rem;
+    margin-bottom: 2%;
+}
+.item-description{
+    font-size: 1rem;
+    text-align: left;
+    font-family: 'Yomogi', cursive;
+}
+
+/* contact
+----------------------------------------------------------- */
+.contact-content{
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+/* フッター */
+footer{
+    background-color: #FAFAFA;
+    text-align: center;
+    padding: 8px 0;
+}
+footer p{
+    color: #666;
+    font-size: 0.9375rem;
+}
+
+
+/* モバイル版
+---------------------------------------------------------------------------------- */
+@media(max-width:600px){
+    /* home */
+    #home .page-title{
+        font-size: 1.875rem;
+    }
+    .btn{
+        font-size: 1rem;
+        padding: 5px 60px;
+        margin-top: 100px;
+    }
+    .logo img{
+        width: 36px;
+        height: 36px;
+        margin: 10px 0 0 0;
+    }
+    .home-content{
+        margin-top: 80%;
+        margin-bottom: 79%;
+    }
+    .logo h1{
+        font-size: 0.9375rem;
+    }
+    .main-nav{
+        font-size: 0.9375rem;
+        margin-right: 10px;
+    }
+    .main-nav li{
+        margin: 10px 0 0 20px;
+    }
+
+    /* about */
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+    .about-content{
+        margin-top: 50%;
+        margin-bottom: 74%;
+    }
+    .about-content h3{
+        font-size: 1.875rem;
+    }
+    .about-content p{
+        font-size: 1rem;
+    }
+
+    /* works */
+    .grid{
+        margin-top: 20%;
+        margin-bottom: 62%;
+    }
+    .item-title{
+        font-size: 1.25rem;
+    }
+
+    /* contact */
+    .contact-content{
+        margin: 20% 0;
+    }
+}
