@@ -282,7 +282,7 @@ footer p{
         font-family: 'Yomogi', cursive;
         font-size: 1.875rem;
         /* 背景色 */
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(20px);
         padding: 50px;
         /* 最前面のひとつ下に */
