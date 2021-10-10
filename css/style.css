@@ -283,7 +283,7 @@ footer p{
         font-size: 1.875rem;
         /* 背景色 */
         background-color: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(2vh);
+        backdrop-filter: blur(1vh);
         padding: 50px;
         /* 最前面のひとつ下に */
         z-index: 99;
