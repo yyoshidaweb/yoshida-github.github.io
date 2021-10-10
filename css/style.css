@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+/* 共通部分 
+----------------------------------*/
+html{
+    font-size: 100%;
+}
+body{
+    font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+    line-height: 1.7;
+    color: #432;
+
+    /* body要素の表示領域を確保 */
+    min-height: 100vh;
+    /* 相対位置に指定 */
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* ヘッダー 
+---------------------------------- */
+/* ハンバーガーメニューを非表示 */
+.hamburger{
+    display: none;
+}
+.mobile-logo{
+    display: none;
+}
+.logo{
+    font-family: 'Yomogi', cursive;
+    padding: 8px;
+    color: #666;
+    display: flex;
+    /* アニメーション時間を指定 */
+    transition: all 0.2s;
+}
+.logo h1{
+    font-size: 1.2rem;
+}
+.logo img{
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 10px 3px 0 0;
+}
+.main-nav{
+    font-family: 'Yomogi', cursive;
+    display: flex;
+    font-size: 1.2rem;
+    padding: 8px;
+    list-style: none;
+}
+.main-nav li{
+    margin-left: 60px;
+}
+.main-nav a{
+    color: #666;
+    transition: all 0.2s;
+}
+/* マウスが重なったとき */
+.main-nav a:hover,
+.logo:hover{
+    filter: brightness(1.8);
+}
+
+/* ヘッダー全体 */
+.page-header{
+    /* ヘッダーを固定 */
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    /* 背景色 */
+    background-color: rgb(255, 255, 255);
+    font-weight: normal;
+    /* 影 */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.28);
+    /* サイズ */
+    width: 100%;
+    max-height: 50px;
+    top: 0;
+    left: 0;
+    /* 最前面に配置 */
+    z-index: 100;
+}
+.wrapper{
+    max-width: 1980px;
+    margin: 0 auto;
+}
+
+/* モバイル用メニューを非表示 */
+#mobile-nav{
+    display: none;
+}
+
+/* home 
+------------------------------------- */
+
+/* home要素の背景画像 */
+.home-content{
+    /* 背景画像 */
+    object-fit: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-title{
+    font-size: 3rem;
+    font-family: 'Yomogi', cursive;
+    font-weight: normal;
+    color: #666;
+    text-align: center;
+}
+
+/* 見出し */
+.page-title{
+    font-size: 3.75rem;
+    font-family: 'Yomogi', cursive;
+    font-weight: normal;
+    color: #666;
+    text-align: center;
+}
+
+/* works
+----------------------------------------------------- */
+#works{
+    /* 背景色 */
+    background-color: #fbfbfd;
+}
+.works-contents{
+    /* 縦並び */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+    width: 60%;
+    margin: 5% 0;
+}
+.item img{
+    object-fit: cover;
+    transition: 0.5s;
+    /* 影 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.item img:hover{
+    /* filter: brightness(0.8); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02, 1.02);
+}
+.item-title{
+    color: #666;
+    text-align: center;
+    font-family: 'Yomogi', cursive;
+    font-size: 1.875rem;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+.item-description{
+    color: #666;
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: 'Yomogi', cursive;
+    padding-bottom: 3%;
+}
+
+/* about
+----------------------------------------------- */
+.about-content{
+    font-family: 'Yomogi',cursive;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.icon{
+    height: 150px;
+    width: 150px;
+    border: solid 1px #666;
+    border-radius: 50%;
+}
+.about-content h3{
+    font-size: 3.75rem;
+    font-weight: normal;
+    padding-bottom: 3%;
+    text-align: center;
+}
+.about-content p{
+    text-align: left;
+    font-size: 1.875rem;
+}
+
+/* contact
+----------------------------------------------------------- */
+#contact{
+    background-color: #fbfbfd;
+}
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        /* 最小サイズ */
+    min-height: 100vh;
+}
+
+/* フッター 
+-------------------------------------------------------------*/
+footer{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 8px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.080);
+}
+footer p{
+    color: #666;
+    font-size: 1rem;
+}
+
+
+/* モバイル版
+-------------------------------------------------------------------------------
+------------------------------------------------------------------------------------ */
+@media(max-width:600px){
+    /* header */
+    .page-header{
+        justify-content: space-between;
+    }
+
+    /* ハンバーガーメニュー */
+    .open-image{
+        background-image: url("../images/open-menu.png");
+        background-size: contain;
+        transition: 0.7s;
+    }
+    .close-image{
+        background-image: url("../images/close-menu.png");
+        background-size: contain;
+        transition: 0.7s;
+    }
+    .hamburger{
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin:10px;
+    }
+    .logo img{
+        width: 30px;
+        height: 30px;
+        margin: 3px 1px 0;
+    }
+    .main-nav{
+        font-size: 1rem;
+        margin-right: 5px;
+        display: none;
+    }
+    .main-nav li{
+        margin: 0 0 0 20px;
+    }
+
+    /* モバイル用メニュー */
+    #mobile-nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Yomogi', cursive;
+        font-size: 1.875rem;
+        /* 背景色 */
+        background-color: rgba(255, 255, 255, 0.97);
+        /* backdrop-filter: blur(20px); */
+        padding: 50px;
+        /* 最前面のひとつ下に */
+        z-index: 99;
+        /* 上に逃がす */
+        top: -100vh;
+        left: 0;
+        transition: all 0.7s;
+    }
+    #mobile-nav li{
+        list-style: none;
+    }
+    #mobile-nav a{
+        color: #666;
+    }
+    /* モバイル用メニューの表示切り替え */
+    .show{
+        transform: translate3d(0, 100vh, 0);
+    }
+
+    /* home */
+    .home-title{
+        font-size: 1.875rem;
+    }
+    .page-title{
+        font-size: 1.875rem;
+    }
+
+    
+    /* works */
+    .item-title{
+        font-size: 1.25rem;
+    }
+    .item-description{
+        font-size: 1rem;
+    }
+
+    /* about */
+    .icon{
+        width: 60px;
+        height: 60px;
+    }
+    .about-content h3{
+        font-size: 1.875rem;
+    }
+    .about-content p{
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    
+    /* contact */
+    .contact-content{
+        padding: 30px 0;
+    }
+    /* フォームのサイズ */
+    .contact-content iframe{
+        height: 750px;
+        width: 100%;
+    }
+
+/* /モバイル版 
+-----------------------------------------------------*/
+}
