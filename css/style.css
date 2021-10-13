@@ -8,7 +8,12 @@ html{
 body{
     font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
     line-height: 1.7;
-    color: #432;
+    color: #1d1d1f;
+
+    /* body要素の表示領域を確保 */
+    min-height: 100vh;
+    /* 相対位置に指定 */
+    position: relative;
 }
 a{
     text-decoration: none;
@@ -17,29 +22,35 @@ img{
     max-width: 100%;
 }
 
-/* header 
+/* ヘッダー 
 ---------------------------------- */
+/* ハンバーガーメニューを非表示 */
+.hamburger{
+    display: none;
+}
 .mobile-logo{
     display: none;
 }
 .logo{
     font-family: 'Yomogi', cursive;
     padding: 8px;
-    color: #666;
+    color: #1d1d1f;
     display: flex;
+    /* アニメーション時間を指定 */
+    transition: all 0.3s;
 }
 .logo h1{
-    font-size: 1.875rem;
+    font-size: 1.2rem;
 }
 .logo img{
-    height: 36px;
-    width: 36px;
+    height: 1.2rem;
+    width: 1.2rem;
     margin: 10px 3px 0 0;
 }
 .main-nav{
     font-family: 'Yomogi', cursive;
     display: flex;
-    font-size: 1.875rem;
+    font-size: 1.2rem;
     padding: 8px;
     list-style: none;
 }
@@ -47,35 +58,63 @@ img{
     margin-left: 60px;
 }
 .main-nav a{
-    color: #666;
+    color: #1d1d1f;
+    transition: all 0.3s;
 }
-.main-nav a:hover{
-    color: rgb(102, 102, 102,0.5);
+/* マウスが重なったとき */
+.main-nav a:hover,
+.logo:hover{
+    filter: brightness(4);
 }
+
+/* ヘッダー全体 */
 .page-header{
+    /* ヘッダーを固定 */
+    position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* 背景色 */
-    background-color: #FAFAFA;
+    background-color: rgb(255, 255, 255);
     font-weight: normal;
+    /* 影 */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.28);
+    /* サイズ */
+    width: 100%;
+    max-height: 50px;
+    top: 0;
+    left: 0;
+    /* 最前面に配置 */
+    z-index: 100;
 }
 .wrapper{
     max-width: 1980px;
     margin: 0 auto;
-    padding: 0 4%;
+}
+
+/* モバイル用メニューを非表示 */
+#mobile-nav{
+    display: none;
 }
 
 /* home 
 ------------------------------------- */
+
+/* home要素の背景画像 */
 .home-content{
-    text-align: center;
-    margin: 22% 0 10% 0;
+    /* 背景画像 */
+    object-fit: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-/* 下矢印 */
-.under{
-width: 80px;
-height: 80px;
-margin-top: 17%;
+.home-title{
+    font-size: 3rem;
+    font-family: 'Yomogi', cursive;
+    font-weight: normal;
+    color: #1d1d1f;
+    text-align: center;
 }
 
 /* 見出し */
@@ -83,139 +122,216 @@ margin-top: 17%;
     font-size: 3.75rem;
     font-family: 'Yomogi', cursive;
     font-weight: normal;
-    color: #666;
+    color: #1d1d1f;
     text-align: center;
 }
 
-/* ボタン */
-.btn{
+/* works
+----------------------------------------------------- */
+#works{
+    /* 背景色 */
+    background-color: #fbfbfd;
+}
+.works-contents{
+    /* 縦並び */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+    width: 60%;
+    margin: 5% 0;
+}
+.item img{
+    object-fit: cover;
+    transition: all 0.3s;
+    /* 影 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.item img:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02, 1.02);
+}
+/* アイテムのタイトル */
+.item-title{
+    color: #1d1d1f;
     font-family: 'Yomogi', cursive;
     font-size: 1.875rem;
-    background-color: #FAFAFA;
-    color: #666;
-    border-radius: 0;
-    padding: 5px 100px;
-    margin-top: 100px;
-    /* 枠線 */
-    border: solid 1px #666;
 }
-.btn:hover{
-    background-color: rgb(102, 102, 102,0.5);
-    color: white;
-    border: none;
+/* アイテムの説明文 */
+.item-description{
+    color: #1d1d1f;
+    font-size: 1.25rem;
+    font-family: 'Yomogi', cursive;
+    padding-bottom: 3%;
 }
 
 /* about
 ----------------------------------------------- */
 .about-content{
+    padding: 3% 0 0 0;
     font-family: 'Yomogi',cursive;
-    color: #666;
+    color: #1d1d1f;
     display: flex;
     justify-content: center;
-    margin: 13% 0 17% 0;
+    align-items: center;
 }
 .icon{
-    margin-top: 25px;
-    height: 150px;
-    width: 150px;
-    border: solid 1px #666;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
-}
-.about-text{
-    margin-left: 2%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 30px 15px 0 0;
 }
 .about-content h3{
-    font-size: 3.75rem;
+    font-size: 1.875rem;
     font-weight: normal;
-    margin-bottom: 3%;
-}
-.about-content p{
-    font-size: 1.875rem;
-}
-
-/* works
------------------------------------------------------ */
-.grid{
-    display: grid;
-    gap: 5%;
-    grid-template-columns: repeat(1,minmax(300px,60%));
-    margin-top: 8%;
-    margin-bottom: 10%;
-    justify-content: center;
-}
-.item img{
-    object-fit: cover;
-}
-.item img:hover{
-    filter: brightness(70%);
-}
-.item-title{
-    font-size: 1.875rem;
-    margin-bottom: 2%;
+    padding: 3% 0;
     font-weight: bold;
 }
-.item-description{
-    font-size: 1.25rem;
+.about-content p{
     text-align: left;
-    font-family: 'Yomogi', cursive;
+    font-size: 1.25rem;
+}
+#sns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0 8% 0;
+    z-index: 101;
+}
+.sns-icon{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+.sns-icon:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02, 1.02);
 }
 
 /* contact
 ----------------------------------------------------------- */
+#contact{
+    background-color: #fbfbfd;
+}
 .contact-content{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin: 7.5% 0;
+    padding: 2% 0 2% 0;
 }
 
-/* フッター */
+/* フッター 
+-------------------------------------------------------------*/
 footer{
-    background-color: #FAFAFA;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     padding: 8px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.080);
 }
 footer p{
-    color: #666;
-    font-size: 0.9375rem;
+    color: #1d1d1f;
+    font-size: 1rem;
 }
 
 
 /* モバイル版
----------------------------------------------------------------------------------- */
+-------------------------------------------------------------------------------
+------------------------------------------------------------------------------------ */
 @media(max-width:600px){
-    /* home */
-    #home .page-title{
-        font-size: 1.875rem;
-    }
-    .btn{
-        font-size: 1rem;
-        padding: 5px 60px;
-        margin-top: 100px;
-    }
-    .home-content{
-        margin-top: 100%;
-        margin-bottom: 110%;
-    }
-    /* 下矢印 */
-    .under{
-        display: none;
-    }
     /* header */
+    .page-header{
+        justify-content: space-between;
+    }
+
+    /* ハンバーガーメニュー */
+    .open-image{
+        background-image: url("../images/open-menu.png");
+        background-size: contain;
+        transition: 0.7s;
+    }
+    .close-image{
+        background-image: url("../images/close-menu.png");
+        background-size: contain;
+        transition: 0.7s;
+    }
+    .hamburger{
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin:10px;
+    }
     .logo img{
         width: 30px;
         height: 30px;
-        margin: 0;
+        margin: 3px 1px 0;
     }
     .main-nav{
         font-size: 1rem;
         margin-right: 5px;
+        display: none;
     }
     .main-nav li{
         margin: 0 0 0 20px;
     }
-    /* ロゴのテキストのみ非表示 */
-    .logo-text{
-        display: none;
+
+    /* モバイル用メニュー */
+    #mobile-nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Yomogi', cursive;
+        font-size: 1.875rem;
+        /* 背景色 */
+        background-color: rgb(251, 251, 253, 0.95);
+        padding: 50px;
+        /* 最前面のひとつ下に */
+        z-index: 99;
+        /* 上に逃がす */
+        top: -100vh;
+        left: 0;
+        transition: all 0.7s;
+    }
+    #mobile-nav li{
+        list-style: none;
+    }
+    #mobile-nav a{
+        color: #666;
+    }
+    /* モバイル用メニューの表示切り替え */
+    .show{
+        transform: translate3d(0, 100vh, 0);
+    }
+
+    /* home */
+    .home-title{
+        font-size: 1.875rem;
+    }
+    .page-title{
+        font-size: 1.875rem;
+    }
+
+    
+    /* works */
+    .item-title{
+        font-size: 1.25rem;
+    }
+    .item-description{
+        font-size: 1rem;
     }
 
     /* about */
@@ -223,29 +339,29 @@ footer p{
         width: 60px;
         height: 60px;
     }
-    .about-content{
-        margin-top: 50%;
-        margin-bottom: 74%;
-    }
     .about-content h3{
-        font-size: 1.875rem;
-    }
-    .about-content p{
         font-size: 1.25rem;
     }
-
-    /* works */
-    .grid{
-        margin-top: 20%;
-        margin-bottom: 62%;
+    .about-content p{
+        font-size: 1rem;
+        text-align: left;
     }
-    .item-title{
-        font-size: 1.5rem;
+    .sns-icon{
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
     }
-
+    
     /* contact */
-    .contact-content iframe{
-        height: 700px;
-        width: 300px;
+    .contact-content{
+        padding: 30px 0;
     }
+    /* フォームのサイズ */
+    .contact-content iframe{
+        height: 750px;
+        width: 100%;
+    }
+
+/* /モバイル版 
+-----------------------------------------------------*/
 }

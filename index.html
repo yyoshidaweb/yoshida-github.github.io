@@ -18,85 +18,138 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- ファビコン読み込み -->
     <link rel="icon" type="image/png" href="images/favicon-rabbit.png">
+    <!-- font awesome 読み込み -->
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
 </head>
 <body>
-    <div id="home">
     <!-- ヘッダー -->
     <header class="page-header wrapper">
         <!-- ロゴ -->
-            <a class="logo" href="index.html">
-                <img src="images/rabbit.png" alt="うさぎのアイコン">
-                <h1 class="logo-text">yuma yoshida</h1>
-            </a>
-            <!-- ナビ -->
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="works.html">works</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <a class="logo" href="#">
+            <img src="images/rabbit.png" alt="うさぎのアイコン">
+            <h1 class="logo-text">yuma yoshida</h1>
+        </a>
 
-        <!-- コンテンツ -->
-        <div class="home-content wrapper">
-            <h2 class="page-title">yuma yoshida</h2>
-            <!-- 下矢印 -->
-            <img class="under" src="images/under.png" alt="下矢印">
-        </div><!-- /.home-contents -->
-    </div><!-- /#home -->
-
-    <!-- works -->
-    <!-- 見出し -->
-        <div　class="wrapper">
-            <h2 class="page-title">works</h2>
-        </div><!-- /.wrapper -->
         
-        <!-- CSSグリッド -->
-        <div class="wrapper grid">
-            <div class="item">
-                <p class="item-title page-title">「yoshida's portfolio」</p>
-                <a href="index.html">
-                    <img src="images/portfolio.png" alt="ポートフォリオの画像">
-                </a>
-                <p class="item-description">yuma yoshidaのポートフォリオサイトです。HTMLとCSSで作成しました。(このwebサイトです。)</p>
-            </div>
-        </div><!-- /.grid -->
+        <!-- ナビ -->
+        <nav>
+            <ul class="main-nav">
+                <li><a href="#works">works</a></li>
+                <li><a href="#about">profile</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- ハンバーガーメニューボタン部分 -->
+        <div id="open-nav" class="hamburger open-image"></div>
+            
+    </header>
+    
+    <!-- メインコンテンツ -->
+    <main>
 
-            <!-- about -->
+        <!-- モバイル用メニュー -------------------------->
+                <nav id="mobile-nav">
+                    <ul>
+                        <li><a href="#works">works</a></li>
+                        <li><a href="#about">profile</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+        <!-- /モバイル用メニュー -------------------------->
+
+
+        <!-- #home -->
+        <div id="home">
+            <div class="home-content wrapper">
+                <h2 class="home-title">yuma yoshida</h2>
+            </div><!-- /.home-contents -->
+        </div><!-- /#home -->
+
+        <!-- #works -->
+        <div id="works">
             <!-- 見出し -->
-            <div class="wrapper">
-                <h2 class="page-title">about</h2>
-            </div><!-- /.wrapper -->
-            <!-- コンテンツ -->
-            <div class="about-content wrapper">
-                <img class="icon" src="images/rabbit.png" alt="yuma yoshidaのアイコン">
-                <div class="about-text">
-                    <h3>yuma yoshida</h3>
-                    <p>パソコンと音楽が好きな社会人。<br>
-                        現在はWEBサイトの作り方を勉強中です。
-                    </p>
+            <h2 class="page-title">works</h2>
+            
+            <!-- ポートフォリオ -->
+            <div class="wrapper works-contents">
+
+                <div class="item">
+                    <a href="index.html">
+                        <img src="images/item1.png" alt="">
+                    </a>
+                    <p class="item-title">yoshida's portfolio</p>
+                    <p class="item-description">このWebサイトです。</p>
                 </div>
-            </div><!-- /.about-contents -->
+                <div class="item">
+                    <a>
+                        <img src="images/item2.jpg" alt="">
+                    </a>
+                    <p class="item-title">Comming soon...</p>
+                    <p class="item-description">近日公開予定</p>
+                </div>
+                <div class="item">
+                    <a>
+                        <img src="images/item3.jpg" alt="">
+                    </a>
+                    <p class="item-title">Comming soon...</p>
+                    <p class="item-description">近日公開予定</p>
+                </div>
 
-
-            <!-- contact -->
-            <!-- 見出し -->
-            <div class="wrapper">
-                <h2 class="page-title">contact</h2>
-            </div><!-- /.wrapper -->
-            <!-- コンテンツ -->
-            <div class="contact-content wrapper">
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdw0jvMsga1VgYPytZy9aofPQPFIjdSaqtYJ9qUJGwQNIFr5w/viewform?embedded=true"
-                    width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…
-                </iframe>
-            </div><!-- /.contact-contents -->
-
+            </div><!-- /.works-contents -->
+        </div><!-- /#works -->
+        
+            <!-- #about -->
+            <div id="about">
+                <!-- 見出し -->
+                <div class="wrapper">
+                    <h2 class="page-title">profile</h2>
+                </div><!-- /.wrapper -->
+                <!-- コンテンツ -->
+                <div class="about-content wrapper">
+                    <img class="icon" src="images/rabbit.png" alt="yuma yoshidaのアイコン">
+                    <div class="about-text">
+                        <h3>yuma yoshida</h3>
+                        <p>このWebサイトの制作者です。<br>
+                            好きなことは音楽を聴くことです。
+                        </p>
+                    </div>
+                </div><!-- /.about-contents -->
+                <!-- SNSへのリンク -->
+                <div id="sns">
+                    <a class="sns-icon" href="https://github.com/yoshida-github"><img src="images/git-hub_icon.png" alt="git-hub_icon"></a>
+                    <a class="sns-icon" href="https://twitter.com/yumayoshida_web"><img src="images/twitter_icon.png" alt="twitter_icon"></a>
+                </div>
+            </div>
+                
+                
+            <!-- #contact -->
+            <div id="contact">
+                <!-- 見出し -->
+                <div class="wrapper">
+                    <h2 class="page-title">contact</h2>
+                </div><!-- /.wrapper -->
+                <!-- コンテンツ -->
+                <div class="contact-content wrapper">
+                    <div class="contact-form">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSdw0jvMsga1VgYPytZy9aofPQPFIjdSaqtYJ9qUJGwQNIFr5w/viewform?embedded=true"
+                            width="640" height="550" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…
+                        </iframe>
+                    </div>
+                </div><!-- /.contact-contents -->
+            </div> 
+    </main>
     <footer>
         <div class="wrapper">
             <p><small>&copy;2021 yuma yoshida</small></p>
         </div>
     </footer>
+    
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
