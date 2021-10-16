@@ -267,7 +267,7 @@ footer p{
         background-image: url("../images/close-menu.png");
         background-size: contain;
         transform: rotateX(180deg);
-        transition: 0.7s;
+        transition: 0.3s;
     }
     .hamburger{
         display: block;
