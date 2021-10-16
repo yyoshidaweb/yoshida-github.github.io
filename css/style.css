@@ -261,7 +261,7 @@ footer p{
     .open-image{
         background-image: url("../images/open-menu.png");
         background-size: contain;
-        transition: 0.7s;
+        transition: 0.3s;
     }
     .close-image{
         background-image: url("../images/close-menu.png");
