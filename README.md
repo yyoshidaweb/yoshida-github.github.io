@@ -1,2 +1,3 @@
 # yoshida-github.github.io
-ポートフォリオサイトです。
+ポートフォリオサイト
+https://yoshida-github.github.io/
