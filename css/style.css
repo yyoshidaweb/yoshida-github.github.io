@@ -333,7 +333,7 @@ footer p{
 
     /* home */
     .home-content{
-        background-image: url("../images/mobile-home_bg.jpg");
+        height: 60vh;
     }
     .home-title{
         font-size: 1.875rem;
