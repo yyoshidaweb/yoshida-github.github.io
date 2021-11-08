@@ -47,7 +47,6 @@ img{
     width: 38px;
 }
 .main-nav{
-    /* font-family: 'Yomogi', cursive; */
     font-weight: 300;
     display: flex;
     font-size: 1.2rem;
@@ -158,7 +157,6 @@ img{
 /* アイテムのタイトル */
 .item-title{
     color: #1d1d1f;
-    /* font-family: 'Yomogi', cursive; */
     font-weight: 300;
     font-size: 1.875rem;
 }
@@ -167,7 +165,6 @@ img{
     font-weight: 100;
     color: #1d1d1f;
     font-size: 1.25rem;
-    /* font-family: 'Yomogi', cursive; */
 }
 
 /* about(Profile)
