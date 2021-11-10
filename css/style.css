@@ -6,7 +6,7 @@ html{
     font-size: 100%;
 }
 body{
-    font-family: 'Noto Sans JP', "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+    font-family: 'Noto Sans JP',sans-serif;
     line-height: 1.7;
     color: #1d1d1f;
 
@@ -116,6 +116,11 @@ img{
     font-weight: normal;
     color: #1d1d1f;
     text-align: center;
+}
+.home-description{
+    font-weight: 100;
+    font-size: 1.25rem;
+    margin: 1.25rem;
 }
 
 /* 見出し */
@@ -340,6 +345,9 @@ footer p{
     }
     .page-title{
         font-size: 1.875rem;
+    }
+    .home-description{
+        font-size: 1rem;
     }
 
 
