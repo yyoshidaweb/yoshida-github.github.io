@@ -17,7 +17,9 @@ $(function () {
         //対象先の高さ - ヘッダーの高さ をpositionに代入
         var position = target.offset().top - header;
         /* positionの位置まで、speedの速さで、swingという動作で移動する */
-        $("html, body").animate({ scrollTop: position }, speed, "swing");
+        $("html, body").animate({
+            scrollTop: position
+        }, speed, "swing");
         return false;
     });
 
