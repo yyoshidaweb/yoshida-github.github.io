@@ -1,3 +1,2 @@
-# yyoshidaweb.github.io
-ポートフォリオサイト
-https://yyoshidaweb.github.io/
+# 概要
+最初に作ったポートフォリオサイトです。
